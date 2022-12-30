@@ -1,0 +1,96 @@
+/* apply a natural box layout model to all elements, but allowing components to change */
+html {
+    box-sizing: border-box;
+    font-size: 62.5%;
+  }
+  *, *:before, *:after {
+    box-sizing: inherit;
+  }
+
+body  {
+    font-size: 1.6rem;
+    font-family: 'Open Sans', sans-serif;
+    background-color: #eff0f0;
+}
+
+.container  {
+    max-width: 35rem;
+    width: 90%;
+    margin: 0 auto;
+}
+
+.mt-5 {
+    margin-top: 10rem;
+}
+
+.result {
+    background-color: black;
+    padding: 1.5rem 0;
+}
+
+.result-solution {
+    margin: 0;
+    color: white;
+    text-align: right;
+    padding: 0 .7rem;
+    font-family: monospace;
+    font-size: 2.2rem;
+}
+.btn {
+    border: none;
+    background-color: lightseagreen;
+    border-bottom: 2px solid black;
+    border-left: 2px solid black;
+    padding: 2rem 0;
+    font-weight: 700;
+    cursor: pointer;
+    transition: all 0.3s ease-out;
+}
+
+.btn.arrow {
+    font-size: 2rem;
+}
+
+.btn:hover {
+    background-color: lightblue;
+}
+
+.first-column {
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+}
+
+.first-column .btn:first-child, 
+.second-column .btn:first-child,
+.third-column .btn:first-child {
+    border-left: none;
+}
+
+.second-column {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr)
+ }
+
+.third-column {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+}
+
+.third-column .btn {
+    border-bottom: none;
+}
+
+.first-column .btn:last-child, 
+.second-column .btn:last-child,
+.third-column .btn:last-child {
+    background-color: chocolate;
+    color: white;
+    font-size: 1.8rem;
+}
+
+.first-column .btn:last-child:hover, 
+.second-column .btn:last-child:hover,
+.third-column .btn:last-child:hover {
+    background-color: orange;
+}
+
